@@ -1,3 +1,6 @@
+#Huge thanks to https://stackoverflow.com/users/10021223/liambogur
+#for providing this answer: https://stackoverflow.com/a/61674334
+
 #requirements.txt
 from gtts import gTTS
 from pygame import mixer
@@ -22,14 +25,15 @@ while True:
     #apparently this only works in pygame==2.0.0.dev8, 
     #since my 1.9.6 version gave me a lot of headaches
     mixer.init(devicename='CABLE Input (VB-Audio Virtual Cable)')
-    usr_text = input("Type the text to be spoken: ")
+    usr_text = input("Digite o texto que será falado: ")
 
     if not usr_text:
         continue
+    
 
-    #tts = gTTS(text = usr_text, lang ="pt") = Brazilian portuguese
+    tts = gTTS(text = usr_text, lang ="pt")
     #if lang is not provided, US English is the default one
-    tts = gTTS(text = usr_text)
+    #tts = gTTS(text = usr_text)
     #sadly we need to save this to a file, instead of using it in memory
     #(at least I don't know how)
     tts.save(file_names[flag])
