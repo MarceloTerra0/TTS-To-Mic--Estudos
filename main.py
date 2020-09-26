@@ -1,6 +1,6 @@
 #Huge thanks to https://stackoverflow.com/users/10021223/liambogur
 #for providing this answer: https://stackoverflow.com/a/61674334
-#
+
 #requirements.txt
 from gtts import gTTS
 from pygame import mixer
