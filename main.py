@@ -25,10 +25,10 @@ while True:
     #apparently this only works in pygame==2.0.0.dev8, 
     #since my 1.9.6 version gave me a lot of headaches
     mixer.init(devicename='CABLE Input (VB-Audio Virtual Cable)')
+    
     usr_text = input("Digite o texto que será falado: ")
-
-    if not usr_text:
-        continue
+    while not usr_text:
+        usr_text = input("Digite o texto que será falado: ")
     
 
     tts = gTTS(text = usr_text, lang ="pt")
